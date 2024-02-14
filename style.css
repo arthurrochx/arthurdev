@@ -33,7 +33,7 @@ body * {
 /*container*/
 
 #container {
-  width: 100px;
+  width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
@@ -72,11 +72,15 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -111,10 +115,12 @@ ul li a {
   font-weight: 500px;
   transition: background 0.5s;
 }
+/*pseudo-selector*/
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
+/*link das redes sociais*/
 #social-links {
   display: flex;
   justify-content: center;
@@ -134,17 +140,36 @@ ul li a:hover {
 #social-links a:hover {
   background: var(--highlight-color);
 }
+/*rodapé*/
 footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
 }
-
+/*media queries */
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+/*animations indo para o lado de maneira suave*/
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+/*voltando de maneira suave*/
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
