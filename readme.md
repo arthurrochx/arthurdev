@@ -18,7 +18,7 @@ Programa exclusivo e gratuito, promovido por mim.
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/preview.jpg" width="100%">
+  <img alt="projeto DevLinks" src=".github/preview.jpg" style="width: 80%; margin: auto;">
 </p>
 
 ## 🚀 Tecnologias
